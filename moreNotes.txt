@@ -1,0 +1,62 @@
+ALTER TABLE reiseinformationsportal ADD FOREIGN KEY (region_id) REFERENCES regionen(id);
+
+
+CREATE TABLE benutzer (
+    id INTEGER,
+    benutzername VARCHAR(30),
+    password VARCHAR(40)
+    PRIMARY KEY (id)
+);
+
+ALTER TABLE reiseinformationsportal
+ADD COLUMN region__id INT NOT NULL;
+
+ALTER TABLE reiseinformationsportal
+ADD FOREIGN KEY (region__id) REFERENCES reiseinformationsportal(region__id);
+
+
+ALTER TABLE reiseinformationsportal
+ADD CONSTRAINT FK_region_id
+FOREIGN KEY (region_id) REFERENCES reiseinformationsportal(region_id);
+
+
+reiseinformationsportal
+
+
+ALTER TABLE reiseinformationsportal ADD CONSTRAINT fk region id FOREIGN KEY (region id) REFERENCES (region id);
+
+
+
+ALTER TABLE reiseinformationsportal
+ADD FOREIGN KEY (region_id) REFERENCES reiseinformationsportal(region_id);
+
+
+ALTER TABLE Orders
+ADD CONSTRAINT FK_PersonOrder
+FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+
+
+
+
+
+*****
+NOT USED:
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
+);
+*****
+
+used:
+ALTER TABLE  `reiseinformationsportal` ADD  `bild` VARCHAR( 100 ) NOT NULL AFTER  `ende` ,
+ADD  `thumbnail` VARCHAR( 100 ) NOT NULL AFTER  `bild` ;
+
+
+
+To add a foreign key (grade_id) to an existing table (users), follow the following steps:
+
+ALTER TABLE users ADD grade_id SMALLINT UNSIGNED NOT NULL DEFAULT 0;
+ALTER TABLE users ADD CONSTRAINT fk_grade_id FOREIGN KEY (grade_id) REFERENCES grades(id);
