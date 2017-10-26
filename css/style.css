@@ -1,0 +1,321 @@
+body{
+  background-image: url('../img/woods-wallpaper.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*color: white; /* FIXME: doesn't work  */
+  /*style="background-color: #6da4db;*/
+
+}
+/*.container-fluid{
+  opacity: 1;
+}*/
+#phpBtn{
+  border: 2px solid #337ab7;
+  border-radius: 25px;
+}
+
+div.round{
+  border-radius: 25px;
+  padding: 20px;
+     width: 200px;
+     height: 150px;
+}
+#cssbtn{
+  color: #337ab7;
+  border: 2px solid #337ab7;
+border-radius: 25px;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+/*1250*/
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: white;/* #4CAF50*/
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+    height: inherit;
+    /*height: 200px;*/
+}
+
+img.avatar {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+/*1250*/
+
+
+
+
+
+
+
+div.circle-avatar{
+/* make it responsive */
+max-width: 100%;
+width:100%;
+height:auto;
+display:block;
+/* div height to be the same as width*/
+padding-top:100%;
+
+/* make it a circle */
+border-radius:50%;
+
+/* Centering on image`s center*/
+background-position-y: center;
+background-position-x: center;
+background-repeat: no-repeat;
+
+ it makes the clue thing, takes smaller dimension to fill div */
+background-size: cover;
+
+/* it is optional, for making this div centered in parent*/
+margin: 0 auto;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+}
+
+
+
+.teaser-box{
+	-webkit-box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.2);
+	min-height:auto;
+}
+
+.teaser-box > div{
+	padding:10px;
+}
+
+.teaser-box .title h3{
+	text-transform:uppercase;
+	transition: all 0.5s;
+}
+
+.teaser-box .title h3:hover{
+	color: #4288CC;
+	cursor:pointer;
+}
+
+.teaser-box .pic-wrapper{
+height:170px;
+overflow:hidden;
+padding:0;
+position:relative;
+}
+
+.teaser-box .pic-wrapper .overlayer{
+position:absolute;
+width:100%;
+height:170px;
+top:0;
+display:none;
+color:white;
+background-color:none;
+transition:background-color 1s;
+}
+
+.teaser-box .pic-wrapper:hover .overlayer{
+display:block;
+animation-name: background;
+animation-duration: 2s;
+
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes background {
+   0%   {background-color:rgba(0,0,0,0.3);}
+   100% {background-color:rgba(0,0,0,0.5);}
+}
+
+/* Standard syntax */
+@keyframes background {
+     0%   {background-color:rgba(0,0,0,0.3);}
+    100% {background-color:rgba(0,0,0,0.5);}
+}
+
+
+
+
+
+
+
+
+
+
+
+/*div.circle-avatar{
+/* make it responsive */
+/*max-width: 100%;
+width:100%;
+height:auto;
+display:block;*/
+/* div height to be the same as width*/
+/*padding-top:100%;*/
+
+/* make it a circle */
+/*border-radius:50%;*/
+
+/* Centering on image`s center*/
+/*background-position-y: center;*/
+/*background-position-x: center;*/
+/*background-repeat: no-repeat;*/
+
+/* it makes the clue thing, takes smaller dimension to fill div */
+/*background-size: cover;*/
+
+/* it is optional, for making this div centered in parent*/
+/*margin: 0 auto;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+}*/
